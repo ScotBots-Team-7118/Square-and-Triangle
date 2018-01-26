@@ -1,4 +1,4 @@
-// Welcome to the Auto class here we have all the auto code in an easy!
+,jc// Welcome to the Auto class here we have all the auto code in an easy!
 package org.usfirst.frc.team3070.robot;
 
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -21,7 +21,7 @@ public class Auto implements Pronstants {
 	 * 
 	 * @param d
 	 *            Drive
-	 * @param s
+	 * @param 
 	 *            Sensors
 	 */
 	public Auto(Drive d, Sensors s) {
@@ -86,4 +86,3 @@ public class Auto implements Pronstants {
 								i++;//reset all the things and increase i by 1
 							}}}}
 			} }
-	
