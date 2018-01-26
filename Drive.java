@@ -54,20 +54,6 @@ public class Drive {
 	 *            left follower
 	 */
 
-	boolean move1(double moving, int rotations) {
-
-		if (sensors.encR.getDistance() < rotations && encL.getDistance() < rotations) {
-			setRight(moving);
-			setLeft(moving);
-			return false;
-		} else {
-			sensors.encR.reset();
-			sensors.encL.reset();
-			stop();
-			return true;
-		}
-	}
-
 	/**
 	 * Sets both sides to a certain value
 	 * 
