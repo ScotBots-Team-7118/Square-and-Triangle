@@ -9,7 +9,7 @@ public class Sensors implements Pronstants {
 
 	/**
 	 * Constructor for sensors
-	 */ 
+	 */
 	public Sensors() {
 		// Initializing encoders
 		encR = new Encoder(PORT_ENC_R1, PORT_ENC_R2, false); // Right encoder

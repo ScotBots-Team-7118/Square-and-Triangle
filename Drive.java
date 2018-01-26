@@ -12,8 +12,9 @@ public class Drive {
 	TalonSRX TalRF = new TalonSRX(Pronstants.PORT_RF); // Right follower Talon
 	TalonSRX TalLM = new TalonSRX(Pronstants.PORT_LM); // Left master Talon
 	TalonSRX TalLF = new TalonSRX(Pronstants.PORT_LF); // Left follower Talon
-	
+
 	Sensors sensors;
+
 	// open variables:
 	/**
 	 * Sets right side motors to a certain amount, given by arg
@@ -21,6 +22,7 @@ public class Drive {
 	public Drive(Sensors sense) {
 		sensors = sense;
 	}
+
 	void setRight(double amountR) {
 		TalRM.set(ControlMode.PercentOutput, amountR);
 		TalRF.set(ControlMode.Follower, Pronstants.PORT_RF);
@@ -51,22 +53,19 @@ public class Drive {
 	 * @param lf
 	 *            left follower
 	 */
-	
-	
 
 	boolean move1(double moving, int rotations) {
-	
 
-			if (sensors.encR.getDistance() < rotations && encL.getDistance() < rotations) {
-				setRight(moving);
-				setLeft(moving);
-				return false;
-			}else {
-				sensors.encR.reset();
-				sensors.encL.reset();
-				stop();
-				return true;
-			}
+		if (sensors.encR.getDistance() < rotations && encL.getDistance() < rotations) {
+			setRight(moving);
+			setLeft(moving);
+			return false;
+		} else {
+			sensors.encR.reset();
+			sensors.encL.reset();
+			stop();
+			return true;
+		}
 	}
 
 	/**

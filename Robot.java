@@ -38,21 +38,16 @@ public class Robot extends IterativeRobot {
 
 	boolean Turned = false;
 
-	public enum Auto_Path{ //List of all possible paths (PATH_[Left, Center, or Right starting postition][sCale or sWitch][Right or Left Side])
-		PATH_LCL, //Left starting position combinations
-		PATH_LWL,
-		PATH_LCR,
-		PATH_LWR,
-		
-		PATH_CCL, //Center starting position combinations
-		PATH_CWL,
-		PATH_CCR,
-		PATH_CWR,
-		
-		PATH_RCL, //Right starting position combinations
-		PATH_RWL,
-		PATH_RCR,
-		PATH_RWR
+	public enum Auto_Path { // List of all possible paths (PATH_[Left, Center, or Right starting
+							// postition][sCale or sWitch][Right or Left Side])
+		PATH_LCL, // Left starting position combinations
+		PATH_LWL, PATH_LCR, PATH_LWR,
+
+		PATH_CCL, // Center starting position combinations
+		PATH_CWL, PATH_CCR, PATH_CWR,
+
+		PATH_RCL, // Right starting position combinations
+		PATH_RWL, PATH_RCR, PATH_RWR
 	}
 
 	// Initializing Gyros-caused crashess
