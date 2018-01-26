@@ -3,7 +3,7 @@ package org.usfirst.frc.team3070.robot;
 import edu.wpi.first.wpilibj.DigitalSource;
 
 public interface Pronstants {
-
+	final long ENC_DIF = 4096
 	final int PORT_RM = 2; // Right master CIM port
 	final int PORT_RF = 5; // Right follower CIM port
 

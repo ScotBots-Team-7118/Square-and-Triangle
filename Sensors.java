@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.AnalogGyro;
 import edu.wpi.first.wpilibj.Encoder;
 
 public class Sensors implements Pronstants {
-	Encoder encL, encR;
+	Encoder encoderL, encoderR;
 	AnalogGyro gyro;
 
 	/**
@@ -12,8 +12,11 @@ public class Sensors implements Pronstants {
 	 */
 	public Sensors() {
 		// Initializing encoders
-		encR = new Encoder(PORT_ENC_R1, PORT_ENC_R2, false); // Right encoder
-		encL = new Encoder(PORT_ENC_L1, PORT_ENC_L2, false); // Left encoder
+		long encR = encoderR/4096;
+		long encL = encoder L/4096;
+		
+		encoderR = new Encoder(PORT_ENC_R1, PORT_ENC_R2, false); // Right encoder
+		encoderL = new Encoder(PORT_ENC_L1, PORT_ENC_L2, false); // Left encoder
 
 		// Initializing Gyros
 		gyro = new AnalogGyro(PORT_GYRO);
